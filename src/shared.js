@@ -1,6 +1,4 @@
 const V0_URL = 'https://amo-tm.github.io/wip-host/sdk.js';
-const EXISTING_SCRIPT_MESSAGE =
-  'loadSdk.setLoadParameters was called but an existing Amo SDK script already exists in the document; existing script parameters will be used';
 
 export const findScript = () => {
   return document.querySelector(`script[src^="${V0_URL}"]`);
@@ -26,13 +24,13 @@ const registerWrapper = (sdk) => {
     return;
   }
 
-  sdk._registerWrapper({ name: 'sdk-js', version: _VERSION });
+  sdk._registerWrapper({ name: 'amo-sdk-js', version: _VERSION });
 };
 
 let sdkPromise = null;
 
 export const loadScript = (params) => {
-  // Ensure that we only attempt to load Amo SDK at most once
+  // Ensure that we only attempt to load AmoSDK at most once
   if (sdkPromise !== null) {
     return sdkPromise;
   }
@@ -45,12 +43,12 @@ export const loadScript = (params) => {
       return;
     }
 
-    if (window.Amo && params) {
+    if (window.AmoSDK && params) {
       console.warn(EXISTING_SCRIPT_MESSAGE);
     }
 
-    if (window.Amo) {
-      resolve(window.Amo);
+    if (window.AmoSDK) {
+      resolve(window.AmoSDK);
       return;
     }
 
@@ -58,21 +56,21 @@ export const loadScript = (params) => {
       let script = findScript();
 
       if (script && params) {
-        console.warn(EXISTING_SCRIPT_MESSAGE);
+        console.warn('AmoSDK already exist');
       } else if (!script) {
         script = injectScript(params);
       }
 
       script.addEventListener('load', () => {
-        if (window.Amo) {
-          resolve(window.Amo);
+        if (window.AmoSDK) {
+          resolve(window.AmoSDK);
         } else {
-          reject(new Error('Amo SDK is not available'));
+          reject(new Error('AmoSDK is not available'));
         }
       });
 
       script.addEventListener('error', () => {
-        reject(new Error('Failed to load Amo SDK'));
+        reject(new Error('Failed to load AmoSDK'));
       });
     } catch (error) {
       reject(error);
@@ -91,14 +89,4 @@ export const initSdk = (maybeSdk, args) => {
   const sdk = maybeSdk(...args);
   registerWrapper(sdk);
   return sdk;
-};
-
-export const validateLoadParams = (params) => {
-  const errorMessage = `invalid load parameters.`;
-
-  if (params === null || typeof params !== 'object') {
-    throw new Error(errorMessage);
-  }
-
-  return params;
 };

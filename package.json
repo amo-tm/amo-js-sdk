@@ -27,8 +27,7 @@
   "homepage": "https://amo.tm/",
   "files": [
     "dist",
-    "src",
-    "pure.js"
+    "src"
   ],
   "devDependencies": {
     "@babel/core": "^7.7.2",

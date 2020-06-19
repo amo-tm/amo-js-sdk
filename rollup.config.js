@@ -16,16 +16,8 @@ export default [
   {
     input: 'src/index.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' },
-    ],
-    plugins: PLUGINS,
-  },
-  {
-    input: 'src/pure.js',
-    output: [
-      { file: 'dist/pure.js', format: 'cjs' },
-      { file: 'dist/pure.esm.js', format: 'es' },
+      { file: pkg.main, name: 'AmoSDK', format: 'cjs' },
+      { file: pkg.module, name: 'AmoSDK', format: 'es' },
     ],
     plugins: PLUGINS,
   },

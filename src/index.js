@@ -12,7 +12,7 @@ sdkPromise.catch((err) => {
   }
 });
 
-export const loadSdk = (...args) => {
+export const loadAmoSDK = (...args) => {
   loadCalled = true;
 
   return sdkPromise.then((maybeSdk) => initSdk(maybeSdk, args));
