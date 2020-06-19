@@ -5,7 +5,7 @@ import pkg from './package.json';
 
 const PLUGINS = [
   babel({
-    extensions: ['.ts', '.js', '.tsx', '.jsx'],
+    extensions: ['.js'],
   }),
   replace({
     _VERSION: JSON.stringify(pkg.version),
@@ -14,18 +14,18 @@ const PLUGINS = [
 
 export default [
   {
-    input: 'src/index.ts',
+    input: 'src/index.js',
     output: [
-      {file: pkg.main, format: 'cjs'},
-      {file: pkg.module, format: 'es'},
+      { file: pkg.main, format: 'cjs' },
+      { file: pkg.module, format: 'es' },
     ],
     plugins: PLUGINS,
   },
   {
-    input: 'src/pure.ts',
+    input: 'src/pure.js',
     output: [
-      {file: 'dist/pure.js', format: 'cjs'},
-      {file: 'dist/pure.esm.js', format: 'es'},
+      { file: 'dist/pure.js', format: 'cjs' },
+      { file: 'dist/pure.esm.js', format: 'es' },
     ],
     plugins: PLUGINS,
   },

@@ -1,5 +1,4 @@
-const V0_URL = 'https://amo.tm/sdk/v3';
-const V0_URL_REGEX = /^https:\/\/amo\.tm\/sdk\/v3\/?(\?.*)?$/;
+const V0_URL = 'https://amo-tm.github.io/wip-host/sdk.js';
 const EXISTING_SCRIPT_MESSAGE =
   'loadSdk.setLoadParameters was called but an existing Amo SDK script already exists in the document; existing script parameters will be used';
 

@@ -1,4 +1,4 @@
-import { loadScript, initSdk, loadSdk } from './shared';
+import { loadScript, initSdk } from './shared';
 
 // Execute our own script injection after a tick to give users time to do their
 // own script injection.
