@@ -6,7 +6,6 @@
   "module": "dist/salesbot-sdk.esm.js",
   "jsnext:main": "dist/salesbot-sdk.esm.js",
   "scripts": {
-    "lint": "eslint '{src,types}/**/*.{ts}' && yarn prettier-list-different",
     "build": "yarn clean && yarn rollup --config",
     "clean": "rimraf dist",
     "prettier": "prettier './**/*.{js,ts,md,html,css}' --write",
@@ -44,10 +43,10 @@
   "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amo-tm/salesbot-sdk.git"
+    "url": "git+https://github.com/amo-tm/js-sdk.git"
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amo-tm/salesbot-sdk/issues"
+    "url": "https://github.com/amo-tm/js-sdk/issues"
   }
 }
