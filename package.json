@@ -1,5 +1,5 @@
 {
-  "name": "@amo-tm/salesbot-sdk",
+  "name": "@amo-tm/js-sdk",
   "version": "0.0.1",
   "description": "Javascript SDK for salesbot widgets",
   "main": "dist/salesbot-sdk.js",
