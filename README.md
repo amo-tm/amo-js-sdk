@@ -1,1 +1,1 @@
-# amo-salesbot-sdk
+# amo-js-sdk
