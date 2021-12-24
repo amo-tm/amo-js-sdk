@@ -1,0 +1,51 @@
+{
+  "name": "@amo-tm/wsc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/amo-tm/js-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amo-tm/js-sdk.git",
+    "directory": "packages/wsc"
+  },
+  "author": "Amo <support@amo.tm> (https://amo.tm/)",
+  "exports": {
+    ".": {
+      "browser": "./dist/esm/index.esm2017.js",
+      "module": "./dist/esm/index.esm2017.js",
+      "esm5": "./dist/esm/index.esm.js",
+      "default": "./dist/index.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/esm/index.esm2017.js",
+  "browser": "dist/esm/index.esm2017.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:release": "npm run build",
+    "dev": "rollup -c -w",
+    "lint": "eslint -c .eslintrc.js '**/*.ts' --ignore-path '../../.gitignore'",
+    "lint:fix": "eslint --fix -c .eslintrc.js '**/*.ts' --ignore-path '../../.gitignore'",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tslib": "^2.1.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-json": "4.1.0",
+    "rollup": "2.57.0",
+    "rollup-plugin-replace": "2.2.0",
+    "rollup-plugin-typescript2": "0.30.0",
+    "ts-essentials": "^9.0.0",
+    "typescript": "^4.5.4"
+  },
+  "esm5": "dist/esm/index.esm.js"
+}

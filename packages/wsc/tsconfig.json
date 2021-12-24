@@ -6,5 +6,5 @@
     "lib": ["dom", "es2017"],
     "downlevelIteration": true
   },
-  "include": [".eslintrc.js", "src/**/*"]
+  "include": [".eslintrc.js", "rollup.config.js", "src/**/*"]
 }
