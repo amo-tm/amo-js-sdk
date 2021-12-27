@@ -1,14 +1,13 @@
 {
   "name": "@amo-tm/wsc",
-  "version": "1.0.0",
-  "private": true,
+  "version": "1.0.0-alpha.0",
   "description": "",
   "bugs": {
-    "url": "https://github.com/amo-tm/js-sdk/issues"
+    "url": "https://github.com/amo-tm/amo-js-sdk/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amo-tm/js-sdk.git",
+    "url": "git+https://github.com/amo-tm/amo-js-sdk.git",
     "directory": "packages/wsc"
   },
   "author": "Amo <support@amo.tm> (https://amo.tm/)",

@@ -1,15 +1,15 @@
 {
   "name": "amo-wrapper",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Monorepo for the Amo JavaScript SDK",
   "homepage": "https://amo.tm/",
   "bugs": {
-    "url": "https://github.com/amo-tm/js-sdk/issues"
+    "url": "https://github.com/amo-tm/amo-js-sdk/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amo-tm/js-sdk.git"
+    "url": "git+https://github.com/amo-tm/amo-js-sdk.git"
   },
   "author": "Amo <support@amo.tm> (https://amo.tm/)",
   "dependencies": {},

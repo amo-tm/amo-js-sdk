@@ -1,0 +1,49 @@
+{
+  "name": "amo-tm",
+  "version": "1.0.0-alpha.0",
+  "description": "Amo JS SDK",
+  "author": "Amo <support@amo.tm> (https://amo.tm/)",
+  "homepage": "https://amo.tm/",
+  "keywords": [
+    "amo",
+    "team messenger",
+    "integration",
+    "sdk"
+  ],
+  "files": [
+    "**/dist/",
+    "**/package.json"
+  ],
+  "exports": {
+    "./wsc": {
+      "node": {
+        "require": "./wsc/dist/index.cjs.js",
+        "import": "./wsc/dist/index.mjs"
+      },
+      "default": "./wsc/dist/index.esm.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amo-tm/amo-js-sdk.git"
+  },
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "@amo-tm/wsc": "1.0.0"
+  },
+  "devDependencies": {
+    "rollup": "2.57.0",
+    "@rollup/plugin-commonjs": "21.0.0",
+    "@rollup/plugin-node-resolve": "13.0.5",
+    "rollup-plugin-sourcemaps": "0.6.3",
+    "rollup-plugin-typescript2": "0.30.0",
+    "typescript": "4.2.2"
+  },
+  "components": [
+    "wsc"
+  ],
+  "typings": "empty.d.ts"
+}
