@@ -1,52 +1,26 @@
 {
-  "name": "@amo-tm/js-sdk",
-  "version": "0.0.1",
-  "description": "Javascript SDK for salesbot widgets",
-  "main": "dist/salesbot-sdk.js",
-  "module": "dist/salesbot-sdk.esm.js",
-  "jsnext:main": "dist/salesbot-sdk.esm.js",
-  "scripts": {
-    "build": "yarn clean && yarn rollup --config",
-    "clean": "rimraf dist",
-    "prettier": "prettier './**/*.{js,ts,md,html,css}' --write",
-    "prettier-list-different": "prettier './**/*.{js,ts,md,html,css}' --list-different"
-  },
-  "keywords": [
-    "Integration",
-    "SDK",
-    "Widget",
-    "RPA",
-    "Amo",
-    "Messenger",
-    "AmoCRM"
-  ],
-  "author": "Amo (https://amo.tm/)",
+  "name": "amo-wrapper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo for the Amo JavaScript SDK",
   "homepage": "https://amo.tm/",
-  "files": [
-    "dist",
-    "src"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "@rollup/plugin-replace": "^2.3.1",
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.8.0",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.19.1",
-    "rimraf": "^2.6.2",
-    "rollup": "^1.29.0",
-    "rollup-plugin-babel": "^4.3.3"
+  "bugs": {
+    "url": "https://github.com/amo-tm/amo-js-sdk/issues"
   },
-  "dependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amo-tm/js-sdk.git"
+    "url": "git+https://github.com/amo-tm/amo-js-sdk.git"
   },
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/amo-tm/js-sdk/issues"
+  "author": "Amo <support@amo.tm> (https://amo.tm/)",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/eslint": "7.28.0",
+    "@typescript-eslint/eslint-plugin": "4.31.2",
+    "@typescript-eslint/parser": "4.31.2",
+    "eslint": "7.32.0",
+    "eslint-plugin-import": "2.24.2",
+    "eslint-plugin-unused-imports": "1.1.5",
+    "prettier": "^2.5.1",
+    "typescript": "4.2.2"
   }
 }
