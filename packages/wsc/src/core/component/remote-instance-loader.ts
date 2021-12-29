@@ -1,11 +1,10 @@
-import { Deferred } from '../helpers/deferred';
-import { _setAmoJsSdkMethod } from '../window';
+import { Deferred } from '../deferred';
 import { InstanceFactory, Name, RemoteInstanceUrl } from './types';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const instanceFactoriesDeferred = new Map<RemoteInstanceUrl, Deferred<InstanceFactory<any>>>();
 
-const registerRemoteInstanceFactory = <T extends Name>(
+export const _registerRemoteInstanceFactory = <T extends Name>(
   instanceFactory: InstanceFactory<T>
 ): void => {
   const currentScript = document.currentScript;
@@ -50,11 +49,3 @@ export class RemoteInstanceLoader<T extends Name> {
     anchorElement.parentNode!.insertBefore(scriptElement, anchorElement);
   }
 }
-
-declare module '../window' {
-  interface AmoJsSdk {
-    _registerInstanceFactory?: typeof registerRemoteInstanceFactory;
-  }
-}
-
-_setAmoJsSdkMethod('_registerInstanceFactory', registerRemoteInstanceFactory);

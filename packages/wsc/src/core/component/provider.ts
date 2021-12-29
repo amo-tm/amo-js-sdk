@@ -1,4 +1,4 @@
-import { Deferred } from '../helpers/deferred';
+import { Deferred } from '../deferred';
 
 import { InstantiationMode, Name, NameServiceMapping } from './types';
 import { ComponentContainer } from './component-container';

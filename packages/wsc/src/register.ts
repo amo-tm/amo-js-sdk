@@ -1,7 +1,7 @@
 import { _registerComponent } from './app/internal';
-import { Component } from './component/component';
-import { InstanceFactory } from './component/types';
-import { RemoteInstanceLoader } from './component/remote-instance-loader';
+import { Component } from './core/component/component';
+import { InstanceFactory } from './core/component/types';
+import { RemoteInstanceLoader } from './core/component/remote-instance-loader';
 import { WscService } from './wsc-service';
 import { WscConnectorInnerName } from './interfaces/wsc-connector-inner';
 

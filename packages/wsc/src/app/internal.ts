@@ -1,9 +1,9 @@
-import { Name } from '../component/types';
-import { Component } from '../component/component';
-import { Provider } from '../component/provider';
-
-import { ComponentContainer } from '../component/component-container';
-import { Logger } from '../logger/logger';
+import { Name } from '../core/component/types';
+import { Component } from '../core/component/component';
+import { Provider } from '../core/component/provider';
+import { ComponentContainer } from '../core/component/component-container';
+import { Logger } from '../core/logger';
+import { _registerRemoteInstanceFactory } from '../core/component/remote-instance-loader';
 
 /**
  * The default container name
@@ -14,6 +14,11 @@ const DEFAULT_CONTAINER_NAME = '[DEFAULT_CONTAINER_NAME]';
 
 const container = new ComponentContainer(DEFAULT_CONTAINER_NAME);
 const logger = new Logger('app');
+
+window.AmoJsSdk = {
+  ...(window.AmoJsSdk || {}),
+  _registerInstanceFactory: _registerRemoteInstanceFactory,
+};
 
 /**
  * Registered components.

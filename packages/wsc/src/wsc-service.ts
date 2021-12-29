@@ -1,4 +1,4 @@
-import { Provider } from './component/provider';
+import { Provider } from './core/component/provider';
 import { WscWidgetOptions } from './interfaces/public-types';
 import { WscConnectorInnerName } from './interfaces/wsc-connector-inner';
 

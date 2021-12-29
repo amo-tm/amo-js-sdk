@@ -18,7 +18,7 @@ export interface WscWidgetOptions {
   integrationToken: string;
 }
 
-declare module '../component/types' {
+declare module '../core/component/types' {
   interface NameServiceMapping {
     wsc: WscService;
   }

@@ -14,7 +14,7 @@ export interface WscConnectorInner {
 
 export type WscConnectorInnerName = 'wsc-connector-inner';
 
-declare module '../component/types' {
+declare module '../core/component/types' {
   interface NameServiceMapping {
     'wsc-connector-inner': WscConnectorInner;
   }
