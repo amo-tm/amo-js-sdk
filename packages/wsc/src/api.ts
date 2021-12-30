@@ -1,8 +1,11 @@
-import { _getProvider } from './app/internal';
-import { WscWidgetOptions } from './interfaces/public-types';
+import { WscParams, MountWscOptions } from './interfaces/public-types';
+import { initializeWsc as _initializeWsc } from './api/initializeWsc';
+import { mountWsc as _mountWsc } from './api/mountWsc';
 
-export const initializeWscWidget = (wscWidgetOptions: WscWidgetOptions): void => {
-  const wsc = _getProvider('wsc').getImmediate();
+export const initializeWsc = (wscParams: WscParams): void => {
+  _initializeWsc(wscParams);
+};
 
-  void wsc.initializeWscWidget(wscWidgetOptions);
+export const mountWsc = (options: MountWscOptions): void => {
+  void _mountWsc(options);
 };

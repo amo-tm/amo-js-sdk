@@ -1,6 +1,9 @@
 interface InitializeIframeOptions {
   appId: string;
-  integrationToken: string;
+  userToken: string;
+  userId: string;
+  subjectId: string;
+  teamId: string;
 }
 
 export interface WscConnectorInner {
