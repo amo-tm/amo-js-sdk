@@ -1,5 +1,5 @@
 import { registerWsc } from './register';
-export { initializeWsc } from './api';
+export { initializeWsc, mountWsc } from './api';
 export * from './interfaces/public-types';
 
 registerWsc();
