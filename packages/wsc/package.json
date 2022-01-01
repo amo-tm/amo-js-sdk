@@ -1,7 +1,16 @@
 {
   "name": "@amo-tm/wsc",
-  "version": "1.0.0-alpha.0",
-  "description": "",
+  "version": "1.0.0-alpha.1",
+  "description": "The amo WSC component of the amo JS SDK",
+  "keywords": [
+    "amo",
+    "team messenger",
+    "sdk",
+    "wsc",
+    "embeded",
+    "widget",
+    "messenger technology"
+  ],
   "bugs": {
     "url": "https://github.com/amo-tm/amo-js-sdk/issues"
   },
