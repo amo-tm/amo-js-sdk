@@ -37,11 +37,11 @@ export interface MountWscOptions {
   /**
    * The callback that's called when mount is failed.
    */
-  onError: (error: Error) => void;
+  onError?: (error: Error) => void;
   /**
    * The callback that's called when mount is succeeded.
    */
-  onSuccess: () => void;
+  onSuccess?: () => void;
 }
 
 declare module '../core/component/types' {

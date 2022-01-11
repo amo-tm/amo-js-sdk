@@ -1,6 +1,6 @@
 {
   "name": "@amo-tm/wsc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "The amo WSC component of the amo JS SDK",
   "keywords": [
     "amo",

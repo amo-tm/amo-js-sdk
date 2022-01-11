@@ -6,7 +6,9 @@ export const mountWsc = async (options: MountWscOptions): Promise<void> => {
 
   const wscParams = wsc.getCurrentWscParams();
   if (!wscParams) {
-    options.onError(new Error('The Wsc should be initialized before mount.'));
+    if (options.onError) {
+      options.onError(new Error('The Wsc should be initialized before mount.'));
+    }
     return;
   }
 
@@ -18,7 +20,9 @@ export const mountWsc = async (options: MountWscOptions): Promise<void> => {
   }
 
   if (!containerElement) {
-    options.onError(new Error('The container element is not found.'));
+    if (options.onError) {
+      options.onError(new Error('The container element is not found.'));
+    }
     return;
   }
 
@@ -28,7 +32,9 @@ export const mountWsc = async (options: MountWscOptions): Promise<void> => {
     return;
   }
   if (iframeElement instanceof Error) {
-    options.onError(iframeElement);
+    if (options.onError) {
+      options.onError(iframeElement);
+    }
     return;
   }
 
@@ -37,8 +43,12 @@ export const mountWsc = async (options: MountWscOptions): Promise<void> => {
 
   const connectIframeResult = await wsc.connectIframe(wscParams);
   if (connectIframeResult instanceof Error) {
-    options.onError(connectIframeResult);
+    if (options.onError) {
+      options.onError(connectIframeResult);
+    }
     return;
   }
-  options.onSuccess();
+  if (options.onSuccess) {
+    options.onSuccess();
+  }
 };
